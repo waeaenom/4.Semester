@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MobileApplikationen</string>
+    <string name="hello_text">Hallo! &#10;Hier findest du den Playlist-Creator. &#10;Das ist der Begrüßungstext. &#10;test test test test</string>
+
+
 </resources>
