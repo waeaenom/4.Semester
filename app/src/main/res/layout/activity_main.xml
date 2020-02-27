@@ -4,38 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#31A62D"
+    android:background="@color/hintergrund"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/beginn_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="350dp"
-        android:text="@string/hello_text"
-        android:textColor="@color/begin_text_color"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/angry_btn"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textViewHallo"
+        android:layout_width="109dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:text="Hello"
+        android:textColor="#FFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSOTD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.01999998" />
 
-    <Button
-        android:id="@+id/angry_btn"
-
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:background="@drawable/buttonshape"
-
-        android:text="Start Now!"
-        android:textColor="#050505"
-        android:textSize="50sp"
-        android:onClick="sendMessage"
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewSOTD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your song of the day"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUser" />
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:text="Username"
+        android:textColor="#FFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewHallo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"
+        android:text="create new playlist"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <Button
+        android:id="@+id/buttonCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonshape"
+        android:text="my playlists"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreate"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
